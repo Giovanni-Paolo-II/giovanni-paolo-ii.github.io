@@ -1,0 +1,20 @@
+@import "tailwindcss";
+@plugin "@tailwindcss/typography";
+
+@theme inline {
+  --font-heading: var(--font-urbanist);
+  --font-body: var(--font-poppins);
+  --font-button: var(--font-cabin-condensed);
+
+  --text-h1: 4rem;
+  /* --text-h1--line-height: 1.5rem; */
+  /* --text-h1--letter-spacing: 0.125rem; */
+  --text-h2: 3.25rem;
+  --text-h3: 1.25rem;
+  --text-h4: 1rem;
+  --text-h5: 0.875rem;
+
+  --color-primary: #ffffff;
+  --color-secondary: #000000;
+  --color-tertiary: #f07f00;
+}

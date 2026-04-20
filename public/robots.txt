@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://gp2porcia.it/sitemap-index.xml
