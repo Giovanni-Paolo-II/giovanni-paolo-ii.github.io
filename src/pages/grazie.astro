@@ -4,24 +4,23 @@ import { Image } from 'astro:assets';
 import sentImage from '../assets/sent.png';
 ---
 
-<Layout pageTitle="GP2 | Messaggio inviato" pageHeading="Grazie">
+<Layout pageTitle="Associazione Giovanni Paolo II | Messaggio inviato" pageHeading="Grazie">
   <div class="text-center flex flex-col items-center animate-fade-in-up text-secondary my-24 mx-8">
     <Image src={sentImage} alt="Aeroplano di carta che sfiora un celo nuvoloso" class="flex justify-center w-48 md:w-80 mb-8 md:mb-12"/>
-<div class="flex flex-col items-center gap-12 max-w-4xl">
-  <div class="flex flex-col gap-4">
-  <p class="font-heading text-h2/tight">
-    Il tuo messaggio è stato inviato con successo.
-  </p>
-  <p class="font-body">
-    Ti risponderemo al più presto, di solito entro due giorni lavorative. Intanto, puoi seguirci sui nostri canali social per restare aggiornato sulle nostre attività.
-  </p>
-  </div>
+    <div class="flex flex-col items-center gap-12 max-w-4xl">
+      <div class="flex flex-col gap-4">
+        <p class="font-heading text-h2/tight">
+          Il tuo messaggio è stato inviato con successo.
+        </p>
+        <p class="font-body">
+          Ti risponderemo al più presto, di solito entro due giorni lavorative. Intanto, puoi seguirci sui nostri canali social per restare aggiornato sulle nostre attività.
+        </p>
+      </div>
       <a href="/">
-      <button type="submit" class="cursor-pointer box-btn border">
-        Torna alla home
-      </button>
-    </a>
-</div>
-
+        <button type="submit" class="cursor-pointer box-btn border">
+          Torna alla home
+        </button>
+      </a>
+    </div>
   </div>
 </Layout>
