@@ -1,0 +1,35 @@
+---
+import { Image } from 'astro:assets';
+import heroImage from '../assets/hero.png';
+---
+
+<section id="home">
+  <div class="relative flex min-h-dvh">
+    <Image src={heroImage} alt="Persone che giocano durante il grest estivo." class="absolute inset-0 w-full h-full object-cover -z-10"/>
+    <div class="flex md:hidden flex-col justify-center gap-6 px-6 pb-12 w-full">
+      <h1 class="font-heading text-h1/tight text-center font-extrabold text-primary animate-fade-in-up">
+        Al centro la persona, insieme per la famiglia
+      </h1>
+      <p class="font-body text-h3 text-primary text-center animate-fade-in-up">
+        Promuoviamo la crescita di giovani e famiglie attraverso servizi socio-educativi, e creando legami di comunità per far sì che ogni persona sia valorizzata
+      </p>
+    </div>
+    <div class="hidden md:block w-full">
+      <div class="container mx-8">
+        <div class="grid grid-cols-24 grid-rows-24 gap-4 h-full min-h-dvh">
+          <div class="col-span-12 col-start-1 row-start-6 row-span-6">
+            <div class="flex flex-col gap-8">
+              <h1 class="font-heading text-h1/tight font-extrabold text-primary animate-fade-in-up">
+                Al centro la persona, insieme per la famiglia
+              </h1>
+              <p class="font-body text-h3 text-primary animate-fade-in-up-delay max-w-[90%]">
+                Promuoviamo la crescita di giovani e famiglie attraverso servizi socio-educativi, e creando legami di comunità per far sì che ogni persona sia valorizzata
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>

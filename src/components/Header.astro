@@ -1,0 +1,52 @@
+---
+import { Icon } from 'astro-icon/components'
+---
+
+<nav class="fixed z-50 top-0 w-full h-fit border-b border-gray-400 bg-primary">
+  <div class="hidden md:flex justify-between">
+    <div class="flex">
+      <a href="/" class="flex items-center px-12 border-r border-gray-400" onclick="lenis.scrollTo('#home', { duration: 1.2, easing: (t) => 1 - Math.pow(1 - t, 4), offset: -document.querySelector('nav').offsetHeight })">
+        <Icon name="logo" class="text-4xl"/>
+      </a>
+      <a href="/chi-siamo">
+        <div class="box-btn">Chi siamo</div>
+      </a>
+      <a href="/#cosa-facciamo">
+        <div class="box-btn">Cosa facciamo</div>
+      </a>
+      <a href="/notizie">
+        <div class="box-btn">Notizie</div>
+      </a>
+      <a href="/#contattaci">
+        <div class="box-btn border-r">Contattaci</div>
+      </a>
+    </div>
+    <a href="/#sostienici">
+      <div class="box-btn border-l">Sostienici</div>
+    </a>
+  </div>
+  <div class="flex md:hidden justify-between items-center px-6 py-3">
+    <a href="#home" onclick="lenis.scrollTo('#home', { duration: 1.2, easing: (t) => 1 - Math.pow(1 - t, 4), offset: -document.querySelector('nav').offsetHeight })">
+      <Icon name="logo" class="text-4xl"/>
+    </a>
+    <button id="hamburger-btn" aria-label="Apri menu" aria-expanded="false">
+      <span id="icon-hamburger">
+        <Icon name="hamburger" class="text-4xl"/>
+      </span>
+      <span id="icon-close" class="hidden">
+        <Icon name="close" class="text-4xl"/>
+      </span>
+    </button>
+  </div>
+</nav>
+
+<div id="mobile-menu" class="fixed inset-0 z-40 flex flex-col bg-primary/95 backdrop-blur-sm opacity-0 pointer-events-none transition-opacity duration-300 ease-in-out" aria-hidden="true">
+  <nav class="flex flex-col items-center justify-center flex-1 gap-12 tracking-widest text-sm font-semibold uppercase">
+    <a href="/chi-siamo" onclick="closeMobileMenu()" >Chi siamo</a>
+    <a href="/#cosa-facciamo">Cosa facciamo</a>
+    <a href="/notizie" onclick="closeMobileMenu()">Notizie</a>
+    <a href="/#contattaci" onclick="closeMobileMenu()">Contattaci</a>
+    <a href="/#sostienici" onclick="closeMobileMenu()">Sostienici</a>
+  </nav>
+</div>
+

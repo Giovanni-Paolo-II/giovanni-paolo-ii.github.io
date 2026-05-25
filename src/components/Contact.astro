@@ -1,0 +1,73 @@
+---
+import { Icon } from 'astro-icon/components'
+const siteUrl = Astro.site;
+---
+
+<section id="contattaci" class="bg-[#013248]">
+  <div class="mx-6 md:mx-8 py-12">
+    <div class="flex flex-col gap-6">
+      <h1 class="font-heading text-h1 text-primary text-center md:text-left">Mettiti in contatto</h1>
+      <div class="grid grid-cols-1 md:grid-cols-[1fr_1fr] gap-10 text-primary">
+        <div class="flex flex-col gap-4">
+          <div class="flex flex-col gap-2 font-body text-h4">
+            <div class="flex items-center gap-2">
+              <Icon name="clock" class="size-4 shrink-0"/>
+              <span>Lun - Ven&nbsp;&nbsp;10:00 - 17:30</span>
+            </div>
+            <div class="flex items-center gap-2">
+              <Icon name="phone" class="size-4 shrink-0"/>
+              <span>+39 329-1883197</span>
+            </div>
+            <div class="flex items-center gap-2">
+              <Icon name="email" class="size-4 shrink-0"/>
+              <span>info@associazionegiovannipaolo2.net</span>
+            </div>
+          </div>
+          <div id="map" class="w-full aspect-square md:aspect-auto md:flex-1 z-30"></div>
+        </div>
+        <form action="https://submit-form.com/" data-botpoison-public-key="" method="POST" class="flex flex-col gap-6 text-h4">
+          <input type="hidden" name="_redirect" value={`${siteUrl}/sent`} />
+          <div class="grid grid-cols-[1fr_1fr] gap-4">
+            <div class="flex flex-col gap-2">
+              <label class="font-body text-primary" for="name">Nome</label>
+              <input class="form-field-light" type="text" id="name" name="name" autocomplete="name" required />
+            </div>
+            <div class="flex flex-col gap-2">
+              <label class="font-body text-primary" for="surname">Cognome</label>
+              <input class="form-field-light" type="text" id="surname" name="surname" autocomplete="surname" required />
+            </div>
+          </div>
+          <div class="flex flex-col gap-2">
+            <label class="font-body text-primary" for="email">Email</label>
+            <input class="form-field-light" id="email" name="email" type="email" autocomplete="email" required />
+          </div>
+          <div class="flex flex-col gap-2">
+            <label class="font-body text-primary" for="subject">Oggetto</label>
+            <input class="form-field-light" id="subject" name="subject" />
+          </div>
+          <div class="flex flex-col gap-2">
+            <label class="font-body text-primary" for="message">Testo</label>
+            <textarea class="form-field-light h-40 resize-none" id="message" name="message" required></textarea>
+          </div>
+          <div class="flex items-center justify-between gap-4">
+            <div class="flex items-center gap-3">
+              <div class="relative flex h-6 w-12 shrink-0 items-center">
+                <input type="checkbox" class="cursor-pointer peer absolute left-1/2 z-10 h-6 w-12 -translate-x-1/2 appearance-none rounded-md" id="policy" name="policy" required />
+                <span class="relative z-0 flex h-full w-full items-center rounded-full border border-primary border-opacity-25 bg-transparent duration-300 ease-in-out peer-checked:border-opacity-100"></span>
+                <span class="absolute h-4 w-4 translate-x-1 transform rounded-full border border-primary border-opacity-25 bg-primary shadow-md duration-300 peer-checked:translate-x-7 peer-checked:border-opacity-100 peer-checked:bg-primary"></span>
+              </div>
+              <span class="font-body text-primary">
+                Dichiaro di aver letto <a href="/policy" class="hyperlink text-primary">l'informativa sulla privacy</a> e autorizzo il trattamento dei miei dati personali.
+              </span>
+            </div>
+            <a href="/sent">
+              <button type="submit" class="cursor-pointer border-gray-400 transition-all duration-300 bg-tertiary hover:bg-primary hover:border-primary hover:text-secondary px-9 py-3.5 font-button text-h4 uppercase whitespace-nowrap shrink-0">
+                Invia
+              </button>
+            </a>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>

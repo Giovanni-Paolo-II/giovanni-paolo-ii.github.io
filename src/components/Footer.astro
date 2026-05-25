@@ -1,0 +1,97 @@
+---
+import { Icon } from 'astro-icon/components'
+import { Image } from 'astro:assets'
+---
+
+<footer class="bg-[#013248] text-primary">
+  <div class="h-1 bg-tertiary w-full"></div>
+  <div class="mx-8 py-10">
+    <div class="grid grid-cols-1 gap-10 lg:grid-cols-[auto_auto_auto_auto_auto] lg:gap-8 lg:items-start">
+      <div class="flex flex-col lg:justify-between gap-10 h-full">
+        <a href="/">
+        <Icon name="logo" class="text-5xl" />
+        </a>
+        <div>
+        <p class="font-body text-h5">Affiliato a NOI Associazione</p>
+        <Image src={import("../assets/partners/NOI Associazione oratori e circoli v3.png")} class="inline h-16 w-fit" alt="Logo di NOI Associazione oratori e circoli"/>
+        </div>
+      </div>
+      <div>
+        <h3 class="text-primary font-body font-medium mb-4">
+          Sede Operativa
+        </h3>
+        <ul class="space-y-3 font-body text-h5">
+          <li class="flex items-start gap-2">
+            <Icon name="clock" class="size-4 mt-0.5 shrink-0" />
+            <span>Lun – Ven &nbsp;10:00 – 17:30</span>
+          </li>
+          <li class="flex items-start gap-2">
+            <Icon name="pin" class="size-4 mt-0.5 shrink-0" />
+            <span>Piazzetta Abate Toffoli, 12<br>33080 – Porcia (PN)</span>
+          </li>
+          <li class="flex items-start gap-2">
+            <Icon name="phone" class="size-4 mt-0.5 shrink-0" />
+            <span>+39 329-1883197</span>
+          </li>
+          <li class="flex items-start gap-2">
+            <Icon name="email" class="size-4 mt-0.5 shrink-0" />
+            <a href="mailto:info@associazionegiovannipaolo2.net"
+               class="underline-hover break-all">
+              info@associazionegiovannipaolo2.net
+            </a>
+          </li>
+        </ul>
+      </div>
+      <div>
+        <h3 class="text-primary font-body font-medium mb-4">
+          Sede Legale
+        </h3>
+        <ul class="space-y-3 font-body text-h5">
+          <li class="flex items-start gap-2">
+            <Icon name="bank" class="size-4 mt-0.5 shrink-0" />
+            <span>C.F. 91080740938</span>
+          </li>
+          <li class="flex items-start gap-2">
+            <Icon name="pin" class="size-4 mt-0.5 shrink-0" />
+            <span>Via Marconi, 19<br>33080 – Porcia (PN)</span>
+          </li>
+        </ul>
+      </div>
+      <div>
+        <h3 class="text-primary font-body font-medium mb-4">
+          Mappa del Sito
+        </h3>
+        <ul class="space-y-2 font-body text-h5">
+          <li><a href="#chi-siamo" class="underline-hover">Chi siamo</a></li>
+          <li><a href="#" class="underline-hover">Attività</a></li>
+          <li><a href="#" class="underline-hover">Notizie</a></li>
+          <li><a href="#" class="underline-hover">Contattaci</a></li>
+          <li><a href="#" class="underline-hover">Sostienici</a></li>
+        </ul>
+      </div>
+      <div>
+        <h3 class="text-primary font-body font-medium mb-4">
+          Altri Link
+        </h3>
+        <ul class="space-y-2 mb-5 font-body text-h5">
+          <li><a href="#" class="underline-hover">Statuto</a></li>
+          <li><a href="/contributi" class="underline-hover">Finanziamenti pubblici</a></li>
+          <li><a href="#" class="underline-hover">Informativa privacy</a></li>
+        </ul>
+        <div class="flex gap-3">
+          <a href="https://www.facebook.com/GiovanniPaoloIIPorcia/" aria-label="Facebook"
+             class="w-8 h-8 rounded-full bg-white/10 hover:bg-tertiary flex items-center justify-center transition-colors">
+            <Icon name="facebook" class="size-4" />
+          </a>
+          <a href="https://www.instagram.com/associazionegp2/" aria-label="Instagram"
+             class="w-8 h-8 rounded-full bg-white/10 hover:bg-tertiary flex items-center justify-center transition-colors">
+            <Icon name="instagram" class="size-4" />
+          </a>
+        </div>
+      </div>
+    </div>
+    <div class="mt-10 pt-5 text-center font-body text-h5 text-white/60 ">
+      Copyright &copy; 2026 Associazione Giovanni Paolo II
+    </div>
+  </div>
+</footer>

@@ -1,0 +1,268 @@
+---
+import { Icon } from 'astro-icon/components'
+import { Image } from 'astro:assets';
+import doposcuola from '../assets/doposcuola.png';
+import grest from '../assets/grest.png';
+import formazione from '../assets/formazione.png';
+---
+
+<section id="cosa-facciamo">
+  <div class="">
+    <div class="flex flex-col md:my-8 my-6 md:mx-8 mx-6 gap-4 leading-none reveal">
+      <span class="font-heading text-h1">Attività</span>
+      <div class="flex flex-wrap gap-1">
+        <span class="font-body text-h4">Vuoi saperne di più sui nostri servizi?</span>
+        <a href="#contattaci" onclick="lenis.scrollTo('#contattaci', { duration: 1.5, easing: (t) => 1 - Math.pow(1 - t, 4), offset: -document.querySelector('nav').offsetHeight })" class="flex items-center gap-1">
+          <span class="font-body text-h4 relative after:absolute after:-bottom-1.5 after:left-0 after:h-0.5 after:w-full after:origin-left after:scale-x-0 after:bg-secondary after:transition-all hover:after:scale-x-100">
+            Contattaci
+          </span>
+          <Icon name="arrow" class="size-2"/>
+        </a>
+      </div>
+    </div>
+    <div class="border-t border-gray-400">
+      <div class="hidden md:grid grid-cols-[3fr_1fr] gap-10 py-12 mx-8">
+        <div class="flex flex-col gap-8 reveal">
+          <span class="font-heading text-h2">Doposcuola</span>
+          <p class="font-body text-h4">
+            Offriamo un ambiente accogliente ai bambini delle elementari e ai ragazzi delle medie dove poter svolgere i compiti e socializzare
+          </p>
+          <div class="flex flex-col gap-3 font-body text-h4">
+            <span class="w-full">Servizio nel dettaglio</span>
+            <div class="grid grid-cols-[1fr_1fr] gap-10">
+              <ul class="list-disc pl-5 flex flex-col gap-1">
+                <li>Aiuto compiti all'interno di un piccolo gruppo di lavoro</li>
+                <li>Apprendimento o approfondimento di un metodo di studio</li>
+                <li>Sostegno a chi è in difficoltà con rinforzo personalizzato in alcune materie</li>
+                <li>Attività ludiche e laboratori creativi</li>
+              </ul>
+              <div class="flex flex-col gap-2">
+                <div class="flex items-center gap-2">
+                  <Icon name="clock" class="size-4 shrink-0"/>
+                  <span>Lun - Ven&nbsp;&nbsp;12:30 - 17:30</span>
+                </div>
+                <div class="flex items-center gap-2">
+                  <Icon name="people" class="size-4 shrink-0"/>
+                  <span>Iscrizioni aperte tutto l'anno scolastico</span>
+                </div>
+                <div class="flex items-center gap-2">
+                  <Icon name="food" class="size-4 shrink-0"/>
+                  <span>Mensa con cuoca interna</span>
+                </div>
+                <div class="flex items-center gap-2">
+                  <Icon name="van" class="size-4 shrink-0"/>
+                  <span>Trasporto scuola - sede doposcuola</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="image-wrap reveal delay-300" style="--wipe-color: var(--color-primary)">
+          <Image src={doposcuola} alt="Un'educatrice del doposcuola che osserva e supporta una ragazza mentre fa i compiti." class="w-full h-full object-cover"/>
+        </div>
+      </div>
+      <div class="flex md:hidden flex-col gap-6 py-6 mx-6 font-body text-h4 reveal">
+        <span class="font-heading text-h2">Doposcuola</span>
+        <p>
+          Offriamo un ambiente accogliente ai bambini delle elementari e ai ragazzi delle medie dove poter svolgere i compiti e socializzare
+        </p>
+        <div class="flex flex-col gap-3">
+          <button
+          id="doposcuola-toggle"
+          class="flex items-center gap-2 w-full text-left"
+          aria-expanded="false"
+          onclick="
+            {
+              const ul = this.nextElementSibling;
+              const chevron = this.querySelector('[data-chevron]');
+              const open = this.getAttribute('aria-expanded') === 'true';
+              this.setAttribute('aria-expanded', String(!open));
+              chevron.style.transform = open ? 'rotate(0deg)' : 'rotate(180deg)';
+              ul.style.maxHeight = open ? '0px' : ul.scrollHeight + 'px';
+            }
+          ">
+          <span>Servizio nel dettaglio</span>
+          <Icon id="doposcuola-chevron" data-chevron name="chevron" class="size-4 shrink-0 transition-transform duration-300"/>
+        </button>
+        <ul class="overflow-hidden transition-[max-height] duration-300 ease-in-out list-disc pl-5 space-y-1" style="max-height: 0px;">
+          <li>Aiuto compiti all'interno di un piccolo gruppo di lavoro</li>
+          <li>Apprendimento o approfondimento di un metodo di studio</li>
+          <li>Sostegno a chi è in difficoltà con rinforzo personalizzato in alcune materie</li>
+          <li>Attività ludiche e laboratori creativi</li>
+        </ul>
+      </div>
+      <div class="flex flex-col gap-2">
+        <div class="flex items-center gap-2">
+          <Icon name="clock" class="size-4 shrink-0"/>
+          <span>Lun - Ven&nbsp;&nbsp;12:30 - 17:30</span>
+        </div>
+        <div class="flex items-center gap-2">
+          <Icon name="people" class="size-4 shrink-0"/>
+          <span>Iscrizioni aperte tutto l'anno scolastico</span>
+        </div>
+        <div class="flex items-center gap-2">
+          <Icon name="food" class="size-4 shrink-0"/>
+          <span>Mensa con cuoca interna</span>
+        </div>
+        <div class="flex items-center gap-2">
+          <Icon name="van" class="size-4 shrink-0"/>
+          <span>Trasporto scuola - sede doposcuola</span>
+        </div>
+      </div>
+      <Image src={doposcuola} alt="Un'educatrice del doposcuola che osserva e supporta una ragazza mentre fa i compiti." class="w-full object-cover"/>
+    </div>
+
+    <div class="border-t border-gray-400">
+      <div class="hidden md:grid grid-cols-[3fr_1fr] gap-10 py-12 mx-8">
+        <div class="flex flex-col gap-8 reveal">
+          <span class="font-heading text-h2">Grest estivo</span>
+          <p class="font-body text-h4">
+            Una proposta di animazione e di gioco durante il periodo estivo per bambini e ragazzi tra i 3 e i 14 anni con gite settimanali
+          </p>
+          <div class="flex flex-col gap-3 font-body text-h4">
+            <span class="w-full">Servizio nel dettaglio</span>
+            <div class="grid grid-cols-[1fr_1fr] gap-10">
+              <ul class="list-disc pl-5 flex flex-col gap-1">
+                <li>rispondere alle esigenze organizzative delle famiglie, partendo dalla conoscenza delle attività per arrivare a forme di collaborazione e confronto</li>
+                <li>offrire ambiti di socializzazione ai bambini e ragazzi nei quali sperimentare il gruppo come risorsa</li>
+                <li>valorizzare le risorse dei ragazzi e dei bambini rendendoli protagonisti del loro processo di crescita</li>
+              </ul>
+              <div class="flex flex-col gap-2">
+                <div class="flex items-center gap-2">
+                  <Icon name="clock" class="size-4 shrink-0"/>
+                  <span>Lun - Ven&nbsp;&nbsp;8:00 - 17:00</span>
+                </div>
+                <div class="flex items-center gap-2">
+                  <Icon name="camp" class="size-4 shrink-0"/>
+                  <span>Grestino a partire dalla 4° settimana di agosto</span>
+                </div>
+                <div class="flex items-center gap-2">
+                  <Icon name="food" class="size-4 shrink-0"/>
+                  <span>Mensa con cuoca interna</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="image-wrap reveal delay-300" style="--wipe-color: var(--color-primary)">
+          <Image src={grest} alt="Una vista dall'alto di un gruppo di bambini durante una attività creativa del Grest estivo." class="w-full h-full object-cover"/>
+        </div>
+      </div>
+      <div class="flex md:hidden flex-col gap-6 py-6 mx-6 font-body text-h4 reveal">
+        <span class="font-heading text-h2">Grest estivo</span>
+        <p>
+          Una proposta di animazione e di gioco durante il periodo estivo per bambini e ragazzi tra i 3 e i 14 anni con gite settimanali
+        </p>
+        <div class="flex flex-col gap-3">
+          <button
+          class="flex items-center gap-2 w-full text-left"
+          aria-expanded="false"
+          onclick="
+          {
+            const ul = this.nextElementSibling;
+            const chevron = this.querySelector('[data-chevron]');
+            const open = this.getAttribute('aria-expanded') === 'true';
+            this.setAttribute('aria-expanded', String(!open));
+            chevron.style.transform = open ? 'rotate(0deg)' : 'rotate(180deg)';
+            ul.style.maxHeight = open ? '0px' : ul.scrollHeight + 'px';
+          }
+        ">
+          <span>Servizio nel dettaglio</span>
+          <Icon name="chevron" data-chevron class="size-4 shrink-0 transition-transform duration-300"/>
+        </button>
+        <ul class="overflow-hidden transition-[max-height] duration-300 ease-in-out list-disc pl-5 space-y-1" style="max-height: 0px;">
+          <li>rispondere alle esigenze organizzative delle famiglie, partendo dalla conoscenza delle attività per arrivare a forme di collaborazione e confronto</li>
+          <li>offrire ambiti di socializzazione ai bambini e ragazzi nei quali sperimentare il gruppo come risorsa</li>
+          <li>valorizzare le risorse dei ragazzi e dei bambini rendendoli protagonisti del loro processo di crescita</li>
+        </ul>
+      </div>
+      <div class="flex flex-col gap-2">
+        <div class="flex items-center gap-2">
+          <Icon name="clock" class="size-5 shrink-0"/>
+          <span>Lun - Ven&nbsp;&nbsp;8:00 - 17:00</span>
+        </div>
+        <div class="flex items-center gap-2">
+          <Icon name="camp" class="size-5 shrink-0"/>
+          <span>Grestino a partire dalla 4° settimana di agosto</span>
+        </div>
+        <div class="flex items-center gap-2">
+          <Icon name="food" class="size-5 shrink-0"/>
+          <span>Mensa con cuoca interna</span>
+        </div>
+      </div>
+      <Image src={grest} alt="Una vista dall'alto di un gruppo di bambini durante una attività creativa del Grest estivo." class="w-full object-cover"/>
+    </div>
+
+    <div class="border-t border-gray-400">
+      <div class="hidden md:grid grid-cols-[3fr_1fr] gap-10 py-12 mx-8">
+        <div class="flex flex-col gap-8 reveal">
+          <span class="font-heading text-h2">Formazione</span>
+          <p class="font-body text-h4">
+            Un luogo dove ragazzi e adulti scoprono e valorizzano i propri talenti attraverso formazione, volontariato e creatività
+          </p>
+          <div class="flex flex-col gap-3 font-body text-h4">
+            <span class="w-full">Servizio nel dettaglio</span>
+            <div class="grid grid-cols-[1fr_1fr] gap-10">
+              <ul class="list-disc pl-5 flex flex-col gap-1">
+                <li>Corsi tematici nel ambito dell'educazione e della genitorialità tenuti da professionisti</li>
+                <li>Un percorso per ragazzi delle scuole superiori con l'obiettivo di formarli come ausiliari del Centro Estivo, di creare comunità e di sviluppare talenti</li>
+              </ul>
+              <div class="flex flex-col gap-2">
+                <div class="flex items-center gap-2">
+                  <Icon name="clock" class="size-4 shrink-0"/>
+                  <span>Lun o Mer 18:30 o 20:30</span>
+                </div>
+                <div class="flex items-center gap-2">
+                  <Icon name="calendar" class="size-4 shrink-0"/>
+                  <span>A partire da gennaio per animatori ed educatori del grest estivo</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="image-wrap reveal delay-300" style="--wipe-color: var(--color-primary)">
+          <Image src={formazione} alt="Un gruppo di giovani a sentire Don Daniele Fort mentre stanno seduti in cerchio sotto una tenda nel centro pastorale GP2 di Porcia." class="w-full h-full object-cover"/>
+        </div>
+      </div>
+      <div class="flex md:hidden flex-col gap-6 py-6 mx-6 font-body text-h4 reveal">
+        <span class="font-heading text-h2">Formazione</span>
+        <p>
+          Un luogo dove ragazzi e adulti scoprono e valorizzano i propri talenti attraverso formazione, volontariato e creatività
+        </p>
+        <div class="flex flex-col gap-3">
+          <button
+          class="flex items-center gap-2 w-full text-left"
+          aria-expanded="false"
+          onclick="
+            {
+              const ul = this.nextElementSibling;
+              const chevron = this.querySelector('[data-chevron]');
+              const open = this.getAttribute('aria-expanded') === 'true';
+              this.setAttribute('aria-expanded', String(!open));
+              chevron.style.transform = open ? 'rotate(0deg)' : 'rotate(180deg)';
+              ul.style.maxHeight = open ? '0px' : ul.scrollHeight + 'px';
+            }
+          ">
+          <span>Servizio nel dettaglio</span>
+          <Icon name="chevron" data-chevron class="size-4 shrink-0 transition-transform duration-300"/>
+        </button>
+        <ul class="overflow-hidden transition-[max-height] duration-300 ease-in-out list-disc pl-5 space-y-1" style="max-height: 0px;">
+          <li>Corsi tematici nel ambito dell'educazione e della genitorialità tenuti da professionisti</li>
+          <li>Un percorso per ragazzi delle scuole superiori con l'obiettivo di formarli come ausiliari del Centro Estivo, di creare comunità e di sviluppare talenti</li>
+        </ul>
+      </div>
+      <div class="flex flex-col gap-2">
+        <div class="flex items-center gap-2">
+          <Icon name="clock" class="size-4 shrink-0"/>
+          <span>Lun o Mer 18:30 o 20:30</span>
+        </div>
+        <div class="flex items-center gap-2">
+          <Icon name="calendar" class="size-5 shrink-0"/>
+          <span>A partire da gennaio per animatori ed educatori del grest estivo</span>
+        </div>
+      </div>
+      <Image src={formazione} alt="Un gruppo di giovani a sentire Don Daniele Fort mentre stanno seduti in cerchio sotto una tenda nel centro pastorale GP2 di Porcia." class="w-full object-cover"/>
+    </div>
+  </div>
+</div>
+</section>

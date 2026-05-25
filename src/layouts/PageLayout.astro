@@ -3,39 +3,45 @@ import { Font } from "astro:assets";
 import "../styles/global.css";
 import Header from "../components/Header.astro";
 import Footer from "../components/Footer.astro";
-const { pageTitle } = Astro.props;
+const { pageTitle, pageHeading, pageSubheading } = Astro.props;
 ---
 
 <html class='lang="it"'>
-  <head>
-    <meta charset="utf-8" />
-    <meta name="description" content="" />
-    <link rel="sitemap" href="/sitemap-index.xml" />
-    <link rel="icon" type="image/svg+xml" href="favicon.svg" />
-    <link rel="icon" type="image/png" href="favicon-96x96.png" sizes="96x96" />
-    <link rel="shortcut icon" href="favicon.ico" />
-    <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png" />
-    <script is:inline src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
-    <script is:inline src="https://cdn.jsdelivr.net/npm/split-type@0.3.4/umd/index.min.js"></script>
-    <script is:inline src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
-    <script is:inline src="https://cdn.jsdelivr.net/npm/lenis@1.1.14/dist/lenis.min.js"></script>
-    <link rel="stylesheet" href="https://unpkg.com/lenis@1.1.14/dist/lenis.css" />
-    <script is:inline src="https://unpkg.com/@botpoison/browser" async></script>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0 " />
-    <meta name="generator" content={Astro.generator} />
-    <Font cssVariable="--font-cabin-condensed" />
-    <Font cssVariable="--font-urbanist" />
-    <Font cssVariable="--font-poppins" />
-    <title>{pageTitle}</title>
-  </head>
-  <body class="scroll-smooth bg-primary text-secondary">
-    <div id="smooth-wrapper">
-      <div id="smooth-content">
-        <Header />
-        <slot />
-        <Footer />
+<head>
+  <meta charset="utf-8" />
+  <link rel="sitemap" href="/sitemap-index.xml" />
+  <link rel="icon" type="image/svg+xml" href="favicon.svg" />
+  <link rel="icon" type="image/png" href="favicon-96x96.png" sizes="96x96" />
+  <link rel="shortcut icon" href="favicon.ico" />
+  <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png" />
+  <script is:inline src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+  <script is:inline src="https://cdn.jsdelivr.net/npm/split-type@0.3.4/umd/index.min.js"></script>
+  <script is:inline src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
+  <script is:inline src="https://cdn.jsdelivr.net/npm/lenis@1.1.14/dist/lenis.min.js"></script>
+  <link rel="stylesheet" href="https://unpkg.com/lenis@1.1.14/dist/lenis.css" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0 " />
+  <meta name="generator" content={Astro.generator} />
+  <Font cssVariable="--font-cabin-condensed" />
+  <Font cssVariable="--font-urbanist" />
+  <Font cssVariable="--font-poppins" />
+  <title>{pageTitle}</title>
+</head>
+<body class="scroll-smooth bg-primary text-secondary">
+  <div id="smooth-wrapper">
+    <div id="smooth-content">
+      <Header />
+      <div class="border-b border-gray-400 ">
+      <div class="flex flex-col md:my-8 my-6 md:mx-8 mx-6 gap-4" style="padding-top: var(--nav-height)">
+        <span class="font-heading text-h1/tight">{pageHeading}</span>
+        <span>{pageSubheading}</span>
       </div>
+      </div>
+      <slot />
+      <Footer />
     </div>
-    <script type="text/javascript" src="/scripts/SmoothScrolling.js"></script>
-  </body>
+  </div>
+  <script type="text/javascript" src="/scripts/SmoothScrolling.js"></script>
+  <script type="text/javascript" src="/scripts/HamburgerMenu.js"></script>
+  <script type="text/javascript" src="/scripts/HeaderOffset.js"></script>
+</body>
 </html>
