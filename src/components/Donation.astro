@@ -1,24 +1,33 @@
 ---
+import { Icon } from 'astro-icon/components'
 import { Image } from 'astro:assets';
 import donate from '../assets/donate.png';
 ---
 
 <section id="sostienici" class="bg-[#F5F9FA]">
   <div class="mx-6 lg:mx-8">
-    <div class="hidden lg:grid grid-cols-[1fr_1fr] gap-10 py-12">
+    <div class="hidden lg:grid grid-cols-[2fr_3fr] gap-10 py-12">
       <div class="image-wrap reveal" style="--wipe-color: #F5F9FA">
         <Image src={donate} alt="" class="w-full h-full object-cover"/>
       </div>
-      <div class="flex flex-col gap-4 justify-between">
+      <div class="flex flex-col gap-24">
         <h1 class="font-heading text-h1 reveal">Fai la differenza</h1>
-        <p class="font-body text-h4 reveal delay-150">Dona il tuo</p>
-        <p class="font-heading text-h2 self-center reveal delay-300 float">5x1000</p>
-        <div class="flex flex-col items-center gap-8 py-8 bg-[#F6F3EA] shadow-2xl reveal delay-500">
-          <p class="font-body text-h4 uppercase">All'Associazione Giovanni Paolo II</p>
-          <div class="flex flex-col items-center">
-            <p class="font-heading text-h2">C.F. 91080740938</p>
-            <p class="font-body text-h4">(da inserire nel riquadro apposito)</p>
-          </div>
+        <div class="flex justify-between gap-4 reveal delay-300 float">
+        <div class="flex flex-col items-center gap-2">
+          <Icon name="hand" class="size-24 shrink-0"/>
+          <p class="font-heading text-h3 self-center">Dona il 5x1000</p>
+          <p class="font-body text-h4">C.F. 91080740938</p>
+        </div>
+        <div class="flex flex-col items-center gap-2">
+          <Icon name="bank" class="size-24 shrink-0"/>
+          <p class="font-heading text-h3 self-center">Fai un‘ erogazione liberale</p>
+          <p class="font-body text-h4">IBAN IT07 I030 6909 6061 0000 0151 820</p>
+        </div>
+        <div class="flex flex-col items-center gap-2">
+          <Icon name="person" class="size-24 shrink-0"/>
+          <p class="font-heading text-h3 self-center">Diventa socio</p>
+          <p class="font-body text-h4">Con quota annuale</p>
+        </div>
         </div>
         <p class="font-body text-h4 reveal delay-700">
           Con un semplice gesto contribuirai a sostenere i nostri progetti educativi e sociali che da anni attiviamo nel nostro territorio. Grazie!
@@ -27,15 +36,24 @@ import donate from '../assets/donate.png';
     </div>
     <div class="flex lg:hidden flex-col items-center gap-6 py-10 text-center">
       <h1 class="font-heading text-h1 reveal">Fai la differenza</h1>
-      <p class="font-body text-h4 reveal delay-150 self-start">Dona il tuo</p>
-      <p class="font-heading text-h2 reveal delay-300 float">5x1000</p>
-      <div class="flex flex-col items-center gap-4 py-6 px-4 w-full bg-[#F6F3EA] shadow-2xl reveal delay-500">
-        <p class="font-body text-h4 uppercase">Associazione Giovanni Paolo II</p>
+
+        <div class="flex flex-col justify-between gap-8 reveal delay-150 float">
         <div class="flex flex-col items-center">
-          <p class="font-heading text-h2">C.F. 91080740938</p>
-          <p class="font-body text-h4">(da inserire nel riquadro apposito)</p>
+          <Icon name="hand" class="size-12 shrink-0 gap-1"/>
+          <p class="font-heading text-h2 self-center">Dona il 5x1000</p>
+          <p class="font-body text-h4">C.F. 91080740938</p>
         </div>
-      </div>
+        <div class="flex flex-col items-center gap-1">
+          <Icon name="bank" class="size-12 shrink-0"/>
+          <p class="font-heading text-h2 self-center">Fai un‘ erogazione liberale</p>
+          <p class="font-body text-h4">IBAN IT07 I030 6909 6061 0000 0151 820</p>
+        </div>
+        <div class="flex flex-col items-center gap-1">
+          <Icon name="person" class="size-12 shrink-0"/>
+          <p class="font-heading text-h2 self-center">Diventa socio</p>
+          <p class="font-body text-h4">Con quota annuale</p>
+        </div>
+        </div>
       <p class="font-body text-h4 reveal delay-700">
         Con un semplice gesto contribuirai a sostenere i nostri progetti educativi e sociali che da anni attiviamo nel nostro territorio. Grazie!
       </p>

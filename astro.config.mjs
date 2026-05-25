@@ -5,7 +5,10 @@ import sitemap from "@astrojs/sitemap";
 import tailwindcss from "@tailwindcss/vite";
 
 export default defineConfig({
-  site: "https://gp2porcia.it",
+  // site: "https://gp2porcia.it",
+  site: "https://giovanni-paolo-ii.github.io",
+  // base: '/gp2/',
+  trailingSlash: 'always',
   integrations: [
     icon(),
     sitemap()
