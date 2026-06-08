@@ -1,9 +1,90 @@
 ---
 import Layout from "../layouts/PageLayout.astro";
+import { Image } from 'astro:assets';
+import img1 from '../assets/01.jpg';
+import img2 from '../assets/02.jpg';
+import img3 from '../assets/03.jpg';
+import img4 from '../assets/04.jpg';
+import img5 from '../assets/05.jpg';
+import img6 from '../assets/06.jpg';
+import img7 from '../assets/07.jpg';
 ---
 
 <Layout pageTitle="Associazione Giovanni Paolo II | Chi siamo" pageHeading="Chi siamo" pageSubheading="">
-  <div class="min-h-dvh flex items-center justify-center">
-    <span class="font-body text-h3">Lavori in corso</span>
-  </div>
+
+  <section class="mx-6 md:mx-8 my-8 md:my-12">
+
+    <!-- Mobile -->
+    <div class="flex md:hidden flex-col gap-4">
+      <div class="parallax-img overflow-hidden aspect-4/3">
+        <Image src={img6} alt="" class="w-full h-full object-cover parallax-inner"/>
+      </div>
+      <div class="bg-[#013248] p-6 flex flex-col gap-4">
+        <p class="font-body text-h4 text-primary">
+          Nel 2007 avevamo inaugurato il nuovo Centro Pastorale detto anche oratorio e intitolato al Santo Paolo II accorgendoci poi che oltre alle attività proprie di culto e dell'associazionismo cattolico, c'era bisogno di qualcosa d'altro che rispondesse a esigenze più ampie di aggregazione del mondo giovanile e non solo.
+        </p>
+        <p class="font-body text-h4 text-primary">
+          Provocati da un intervento di Papa Benedetto XVI che in un suo discorso agli insegnanti cattolici, denunciava una vera e propria emergenza educativa, con alcuni genitori ci siamo trovati e abbiamo ragionato: non bastava più pensare a organizzare un oratorio come nel passato. C'era bisogno di un servizio per le famiglie con le famiglie, per i giovani con i giovani, soprattutto una realtà che potesse mettersi in dialogo con le amministrazioni statali e locali, le realtà educative territoriali, i servizi sociali e i bisogni della società porliese, secondo lo stile e i valori del nostro storico e collaudato cristianesimo sociale.
+        </p>
+      </div>
+      <div class="parallax-img overflow-hidden aspect-4/3">
+        <Image src={img2} alt="" class="w-full h-full object-cover parallax-inner"/>
+      </div>
+      <div class="parallax-img overflow-hidden aspect-4/3">
+        <Image src={img5} alt="" class="w-full h-full object-cover parallax-inner"/>
+      </div>
+      <div class="parallax-img overflow-hidden aspect-4/3">
+        <Image src={img4} alt="" class="w-full h-full object-cover parallax-inner"/>
+      </div>
+      <div class="parallax-img overflow-hidden aspect-4/3">
+        <Image src={img7} alt="" class="w-full h-full object-cover parallax-inner"/>
+      </div>
+    </div>
+
+    <!-- Desktop -->
+    <div class="hidden md:flex gap-4 items-start">
+
+      <div class="w-[32%] sticky top-[calc(50vh-12rem)] z-10 bg-[#013248] p-8 flex flex-col gap-6">  <!-- mb-48 -->
+        <p class="font-body text-h4 text-primary">
+          Nel 2007 avevamo inaugurato il nuovo Centro Pastorale detto anche oratorio e intitolato al Santo Paolo II accorgendoci poi che oltre alle attività proprie di culto e dell'associazionismo cattolico, c'era bisogno di qualcosa d'altro che rispondesse a esigenze più ampie di aggregazione del mondo giovanile e non solo.
+        </p>
+        <p class="font-body text-h4 text-primary">
+          Provocati da un intervento di Papa Benedetto XVI che in un suo discorso agli insegnanti cattolici, denunciava una vera e propria emergenza educativa, con alcuni genitori ci siamo trovati e abbiamo ragionato: non bastava più pensare a organizzare un oratorio come nel passato. C'era bisogno di un servizio per le famiglie con le famiglie, per i giovani con i giovani, soprattutto una realtà che potesse mettersi in dialogo con le amministrazioni statali e locali, le realtà educative territoriali, i servizi sociali e i bisogni della società porliese, secondo lo stile e i valori del nostro storico e collaudato cristianesimo sociale.
+        </p>
+      </div>
+
+      <div class="flex flex-col gap-4 w-[34%]">
+        <div class="parallax-img overflow-hidden aspect-4/3">
+          <Image src={img1} alt="" class="w-full h-full object-cover parallax-inner"/>
+        </div>
+        <div class="parallax-img overflow-hidden aspect-3/4">
+          <Image src={img6} alt="" class="w-full h-full object-cover parallax-inner"/>
+        </div>
+        <div class="parallax-img overflow-hidden aspect-4/3">
+          <Image src={img5} alt="" class="w-full h-full object-cover parallax-inner"/>
+        </div>
+        <div class="parallax-img overflow-hidden aspect-4/3">
+          <Image src={img7} alt="" class="w-full h-full object-cover parallax-inner"/>
+        </div>
+      </div>
+
+      <div class="flex flex-col gap-4 w-[34%] mt-24">
+        <div class="parallax-img overflow-hidden aspect-3/4">
+          <Image src={img2} alt="" class="w-full h-full object-cover parallax-inner"/>
+        </div>
+        <div class="parallax-img overflow-hidden aspect-4/3">
+          <Image src={img4} alt="" class="w-full h-full object-cover parallax-inner"/>
+        </div>
+        <div class="parallax-img overflow-hidden aspect-3/4">
+          <Image src={img3} alt="" class="w-full h-full object-cover parallax-inner"/>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- <section class="mx-6 md:mx-8 my-8 md:my-12">
+    <h2 class="font-heading text-h1/tight mb-8">Gruppo di lavoro</h2>
+  </section> -->
+
 </Layout>
