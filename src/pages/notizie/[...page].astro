@@ -1,0 +1,40 @@
+---
+import Layout from "../../layouts/PageLayout.astro";
+import { getCollection } from "astro:content";
+import PostCard from "../../components/PostCard.astro";
+import type { GetStaticPathsOptions, Page } from "astro";
+import type { CollectionEntry } from "astro:content";
+
+export async function getStaticPaths({ paginate }: GetStaticPathsOptions) {
+  const allPosts = (await getCollection("notizie")).sort(
+    (a, b) => b.data.date.raw.valueOf() - a.data.date.raw.valueOf()
+  );
+  return paginate(allPosts, { pageSize: 12 });
+}
+
+const { page } = Astro.props as { page: Page<CollectionEntry<"notizie">> };
+---
+
+<Layout pageTitle="Associazione Giovanni Paolo II | Notizie" pageHeading="Notizie" pageSubheading="Per ulteriori aggiornamenti, seguici su Facebook e Instagram!">
+  <div class="mx-6 md:mx-8 my-8">
+    <div class="grid grid-cols-1 md:grid-cols-4 gap-6 md:gap-8">
+      {page.data.map((post) => <PostCard post={post} />)}
+    </div>
+    {page.lastPage > 1 && (
+      <div class="flex justify-center gap-2 mt-12 font-body text-h4">
+        {Array.from({ length: page.lastPage }, (_, i) => i + 1).map((p) => (
+          <a
+            href={p === 1 ? "/notizie" : `/notizie/${p}`}
+            class={`w-10 h-10 flex items-center justify-center border transition-colors duration-200
+              ${p === page.currentPage
+                ? "bg-secondary text-primary border-secondary"
+                : "border-gray-400 hover:bg-secondary hover:text-primary hover:border-secondary"
+              }`}
+          >
+            {p}
+          </a>
+        ))}
+      </div>
+    )}
+  </div>
+</Layout>

@@ -12,13 +12,18 @@
     "astro": "astro"
   },
   "dependencies": {
+    "@astrojs/node": "^10.1.4",
     "@astrojs/sitemap": "^3.7.2",
     "@tailwindcss/vite": "^4.2.2",
+    "@tinacms/astro": "^0.5.0",
     "astro": "^6.1.6",
     "astro-icon": "^1.1.5",
-    "tailwindcss": "^4.2.2"
+    "tailwindcss": "^4.2.2",
+    "tinacms": "^3.9.1"
   },
   "devDependencies": {
-    "@tailwindcss/typography": "^0.5.19"
+    "@tailwindcss/typography": "^0.5.19",
+    "@tinacms/cli": "^2.4.4",
+    "@types/node": "^25.9.2"
   }
 }

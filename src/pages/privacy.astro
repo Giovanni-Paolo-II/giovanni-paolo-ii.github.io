@@ -1,9 +1,28 @@
 ---
-import Layout from "../layouts/PageLayout.astro";
+import PolicyLayout from "../layouts/ArticleLayout.astro";
+import { Content, frontmatter } from "../privacy.md";
+import type { PolicyFrontmatter } from "../types";
+import defaultImage from "../assets/default.png";
+
+const formatDate = (dateString: string) => {
+  const date = new Date(dateString);
+  return {
+    raw: date,
+    formatted: date.toLocaleDateString("it-IT", {
+      day: "numeric",
+      month: "long",
+      year: "numeric"
+    })
+  };
+};
+
+const enhancedFrontmatter = {
+  ...frontmatter,
+  date: formatDate(frontmatter.date),
+  image: defaultImage,
+};
 ---
 
-<Layout pageTitle="Associazione Giovanni Paolo II | Privacy" pageHeading="Informativa sulla privacy" pageSubheading="">
-  <div class="min-h-dvh flex items-center justify-center">
-    <span class="font-body text-h3">Lavori in corso</span>
-  </div>
-</Layout>
+<PolicyLayout frontmatter={enhancedFrontmatter as PolicyFrontmatter}>
+  <Content />
+</PolicyLayout>

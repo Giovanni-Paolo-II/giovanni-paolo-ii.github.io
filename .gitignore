@@ -19,3 +19,6 @@ pnpm-debug.log*
 
 # vscode settings folder
 .vscode/
+
+# tinacms
+tina/__generated__
