@@ -1,7 +1,7 @@
 ---
-title: "Aperte le iscrizioni per /"Dopo la Campanella/""
+title: "Aperte le iscrizioni per \"Dopo la Campanella\""
 date: 2017-10-09T00:00:00.000Z
-image: /src/content/notizie/assets/2017/Pomeriggio_al_dopo_la_campanella.jpg
+image: /src/content/uploads/2017/Pomeriggio_al_dopo_la_campanella.jpg
 ---
 
 Se stai cercando un ambiente familiare e stimolante dove i tuoi figli possano passare il pomeriggio, il progetto "Dopo la Campanella" dell'Associazione GP2 a Porcia potrebbe fare al caso vostro. È uno spazio pensato per bambini e ragazzi dai 6 ai 13 anni, dove la routine pomeridiana diventa più semplice.

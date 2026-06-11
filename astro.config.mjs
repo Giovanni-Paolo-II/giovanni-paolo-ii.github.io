@@ -3,6 +3,25 @@ import { defineConfig, fontProviders } from "astro/config";
 import icon from "astro-icon";
 import sitemap from "@astrojs/sitemap";
 import tailwindcss from "@tailwindcss/vite";
+import { cpSync, mkdirSync, readdirSync } from "fs";
+
+function copyReportPDFs() {
+  return {
+    name: "copy-report-pdfs",
+    hooks: {
+      "astro:build:setup": copyPDFs,
+      "astro:server:start": copyPDFs,
+    },
+  };
+}
+
+function copyPDFs() {
+  mkdirSync("public/content/uploads", { recursive: true });
+  const src = "src/content/uploads";
+  const dest = "public/content/uploads";
+  const files = readdirSync(src).filter(f => f.endsWith(".pdf"));
+  for (const f of files) cpSync(`${src}/${f}`, `${dest}/${f}`);
+}
 
 export default defineConfig({
   // site: "https://gp2porcia.it",
@@ -11,7 +30,8 @@ export default defineConfig({
   // trailingSlash: 'always',
   integrations: [
     icon(),
-    sitemap()
+    sitemap(),
+    copyReportPDFs()
   ],
   server: {
     port: 3000

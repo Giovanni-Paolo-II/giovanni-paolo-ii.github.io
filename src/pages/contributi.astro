@@ -1,54 +1,38 @@
 ---
 import Layout from "../layouts/PageLayout.astro";
-import { Icon } from 'astro-icon/components'
+import { Icon } from 'astro-icon/components';
+import { getCollection } from "astro:content";
 
-const reports = [
-{
-  year: "2024",
-  filename: "Contributi_2024.pdf"
-},
-{
-  year: "2023",
-  filename: "Contributi_2023.pdf"
-},
-{
-  year: "2022",
-  filename: "Contributi_2022.pdf"
-},
-{
-  year: "2021",
-  filename: "Contributi_2021.pdf"
-},{
-  year: "2020",
-  filename: "Contributi_2020.pdf"
-},{
-  year: "2019",
-  filename: "Contributi_2019.pdf"
-},{
-  year: "2018",
-  filename: "Contributi_2018.pdf"
-},{
-  year: "2017",
-  filename: "Contributi_2017.pdf"
-},
-]
+const allReports = await getCollection("reports");
+const reports = allReports.sort(
+  (a, b) => Number(b.data.year) - Number(a.data.year)
+);
 ---
 
-<Layout pageTitle="Associazione Giovanni Paolo II | Contributi" pageHeading="Finanziamenti pubblici percepiti" pageSubheading="L'Associazione Giovanni Paolo II (APS) redige un bilancio di esercizio annuale in conformità al D.Lgs. 117/2017 (Codice del Terzo Settore).">
+<Layout
+  pageTitle="Associazione Giovanni Paolo II | Contributi"
+  pageHeading="Finanziamenti pubblici percepiti"
+  pageSubheading="L'Associazione Giovanni Paolo II (APS) redige un bilancio di esercizio annuale in conformità al D.Lgs. 117/2017 (Codice del Terzo Settore)."
+>
   <div class="m-6 lg:m-8 min-h-dvh flex flex-col gap-12">
     {
-      reports.map((report,) => (
-      <div class="flex gap-4 lg:justify-between lg:max-w-2xl items-center">
-        <span class="font-heading text-h3">Riepilogo contributi pubblici percepiti nel {report.year}</span>
-        <a href={`/${report.filename}`}>
-          <button type="button" class="cursor-pointer transition-all duration-300 bg-tertiary hover:bg-primary hover:border-gray-400 border border-tertiary text-primary hover:text-secondary lg:px-7 lg:py-3.5 px-3 py-1.5 font-button text-h4 uppercase whitespace-nowrap shrink-0">
-            <div class="flex gap-4 justify-center items-center">
-              <span>Scarica</span>
-              <Icon name="download" class="size-5 shrink-0"/>
-            </div>
-          </button>
-        </a>
-      </div>
+      reports.map((report) => (
+        <div class="flex gap-4 lg:justify-between lg:max-w-2xl items-center">
+          <span class="font-heading text-h3">
+            Riepilogo contributi pubblici percepiti nel {report.data.year}
+          </span>
+          <a href={`/content/uploads/${report.data.filename}`}>
+            <button
+              type="button"
+              class="cursor-pointer transition-all duration-300 bg-tertiary hover:bg-primary hover:border-gray-400 border border-tertiary text-primary hover:text-secondary lg:px-7 lg:py-3.5 px-3 py-1.5 font-button text-h4 uppercase whitespace-nowrap shrink-0"
+            >
+              <div class="flex gap-4 justify-center items-center">
+                <span>Scarica</span>
+                <Icon name="download" class="size-5 shrink-0" />
+              </div>
+            </button>
+          </a>
+        </div>
       ))
     }
   </div>

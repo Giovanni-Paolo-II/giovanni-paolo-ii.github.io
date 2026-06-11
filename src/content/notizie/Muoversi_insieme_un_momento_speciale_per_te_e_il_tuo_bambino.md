@@ -1,7 +1,7 @@
 ---
 title: "Muoversi insieme: un momento speciale per te e il tuo bambino"
 date: 2017-11-14T00:00:00.000Z
-image: /src/content/notizie/assets/2017/Corsi_di_psicomotoricità_funzionale.jpg
+image: /src/content/uploads/2017/Corsi_di_psicomotoricità_funzionale.jpg
 ---
 
 A volte, tra i mille impegni quotidiani, è difficile trovare del tempo di qualità da dedicare esclusivamente al rapporto con i nostri figli. All'Associazione GP2 abbiamo pensato proprio a questo, organizzando i nuovi **corsi di psicomotricità funzionale** ogni mercoledì con la Dott.ssa Chiara Panontin.

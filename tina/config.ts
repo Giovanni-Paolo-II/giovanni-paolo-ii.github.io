@@ -18,7 +18,7 @@ export default defineConfig({
   },
   media: {
     tina: {
-      mediaRoot: "src/content/notizie/assets",
+      mediaRoot: "src/content/uploads",
       publicFolder: "",
     },
   },
@@ -64,6 +64,34 @@ export default defineConfig({
             name: "body",
             label: "Testo",
             isBody: true,
+          },
+        ],
+      },
+      {
+        label: "Rapporti",
+        name: "reports",
+        path: "src/content/reports",
+        format: "json",
+        fields: [
+          {
+            type: "string",
+            name: "year",
+            label: "Anno (YYYY)",
+            isTitle: true,
+            required: true,
+            ui: {
+              validate: (value) => {
+                if (!/^\d{4}$/.test(value ?? "")) {
+                  return "Inserisci un anno nel formato YYYY (es. 2024)";
+                }
+              },
+            },
+          },
+          {
+            type: "image",
+            name: "filename",
+            label: "File PDF",
+            required: true,
           },
         ],
       },

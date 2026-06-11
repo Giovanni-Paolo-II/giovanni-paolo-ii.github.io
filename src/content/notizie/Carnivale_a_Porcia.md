@@ -1,7 +1,7 @@
 ---
 title: "Carnivale a Porcia"
 date: 2026-02-21T00:00:00.000Z
-image: /src/content/notizie/assets/2026/carnevale.jpeg
+image: /src/content/uploads/2026/carnevale.jpeg
 ---
 
 Il Carnevale nella nostra cultura è un momento altamente aggregante sia nella sua fase di preparazione, sia nella fase di manifestazione. Da qualche anno è stato proposto alle Associazioni e realtà presenti nel Tavolo di Comunità come possibilità per sperimentare un lavoro di collaborazione a beneficio di tutta la comunità purliliese.

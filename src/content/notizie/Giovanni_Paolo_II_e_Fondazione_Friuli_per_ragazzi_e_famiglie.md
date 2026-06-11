@@ -1,7 +1,7 @@
 ---
 title: "Giovanni Paolo II e Fondazione Friuli per ragazzi e famiglie"
 date: 2024-03-31T00:00:00.000Z
-image: /src/content/notizie/assets/default.png
+image: /src/content/uploads/default.png
 ---
 
 *Questo articolo è stato prima riportato dal settimanale "Il Popolo".*
