@@ -31,9 +31,9 @@ const { pageTitle, pageHeading, pageSubheading } = Astro.props;
     <div id="smooth-content">
       <Header />
       <div class="border-b border-gray-400 ">
-      <div class="flex flex-col md:my-8 my-6 md:mx-8 mx-6 gap-4" style="padding-top: var(--nav-height)">
-        <span class="font-heading text-h1/tight">{pageHeading}</span>
-        <span>{pageSubheading}</span>
+      <div class="flex flex-col md:my-8 my-6 md:mx-8 mx-6 gap-1 pt-nav scroll-mt-nav">
+        <div class="font-heading text-h1/tight">{pageHeading}</div>
+        {pageSubheading && <div class="font-body text-h4 mt-2">{pageSubheading}</div>}
       </div>
       </div>
       <slot />
@@ -42,7 +42,7 @@ const { pageTitle, pageHeading, pageSubheading } = Astro.props;
   </div>
   <script type="text/javascript" src="/scripts/SmoothScrolling.js"></script>
   <script type="text/javascript" src="/scripts/HamburgerMenu.js"></script>
-  <script type="text/javascript" src="/scripts/HeaderOffset.js"></script>
+  <!-- <script type="text/javascript" src="/scripts/HeaderOffset.js"></script> -->
   <script type="text/javascript" src="/scripts/PhotoParallax.js"></script>
 </body>
 </html>

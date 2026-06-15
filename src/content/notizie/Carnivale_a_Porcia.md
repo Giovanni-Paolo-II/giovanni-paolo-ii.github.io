@@ -1,6 +1,7 @@
 ---
 title: "Carnivale a Porcia"
 date: 2026-02-21T00:00:00.000Z
+author: "Paolo Bidinost"
 image: /src/content/uploads/2026/carnevale.jpeg
 ---
 

@@ -10,7 +10,7 @@
   /* --text-h1--line-height: 1.5rem; */
   /* --text-h1--letter-spacing: 0.125rem; */
   --text-h2: clamp(1.75rem, 4.5vw + 0.5rem, 3.25rem);
-  --text-h3: clamp(0.875rem, 1.5vw + 0.5rem, 1.25rem);
+  --text-h3: clamp(1.125rem, 2vw + 0.5rem, 1.5rem);
   --text-h4: clamp(0.875rem, 1vw + 0.4rem, 1rem);
   --text-h5: clamp(0.75rem, 0.8vw + 0.35rem, 0.875rem);
 
@@ -44,6 +44,11 @@
     50%       { transform: translateY(-6px);  }
   }
   --animate-float: float 3s ease-in-out infinite; */
+}
+@media (min-width: 768px) {
+  @theme {
+    --spacing-nav: 3.5rem;
+  }
 }
 
 @layer components {  /* overridden by Tailwind utilities */

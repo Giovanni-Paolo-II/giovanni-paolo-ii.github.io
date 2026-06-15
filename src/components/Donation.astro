@@ -4,57 +4,62 @@ import { Image } from 'astro:assets';
 import donate from '../assets/donate.png';
 ---
 
-<section id="sostienici" class="bg-[#F5F9FA]">
-  <div class="mx-6 lg:mx-8">
-    <div class="hidden lg:grid grid-cols-[2fr_3fr] gap-10 py-12">
+<section id="sostienici" class="bg-[#F5F9FA] md:py-nav py-6">
+  <div class="">
+    <div class="hidden lg:grid grid-cols-[2fr_3fr] gap-10">
       <div class="image-wrap reveal" style="--wipe-color: #F5F9FA">
         <Image src={donate} alt="" class="w-full h-full object-cover"/>
       </div>
       <div class="flex flex-col gap-12">
         <h1 class="font-heading text-h1 reveal">Fai la differenza</h1>
         <div class="flex m-12 justify-between gap-4 reveal delay-300 float">
-        <div class="flex flex-col items-center gap-2">
-          <Icon name="hand" class="size-24 shrink-0"/>
-          <p class="font-heading text-h3 self-center">Dona il 5x1000</p>
-          <p class="font-body text-h4">C.F. 91080740938</p>
-        </div>
-        <div class="flex flex-col items-center gap-2">
-          <Icon name="bank" class="size-24 shrink-0"/>
-          <p class="font-heading text-h3 self-center">Fai un‘ erogazione liberale</p>
-          <p class="font-body text-h4">IBAN IT07 I030 6909 6061 0000 0151 820</p>
-        </div>
-        <div class="flex flex-col items-center gap-2">
-          <Icon name="person" class="size-24 shrink-0"/>
-          <p class="font-heading text-h3 self-center">Diventa socio</p>
-          <p class="font-body text-h4">Con quota annuale</p>
-        </div>
+          <div class="flex flex-col items-center gap-2">
+            <Icon name="hand" class="size-24 shrink-0"/>
+            <p class="font-heading text-h3 self-center">Dona il 5x1000</p>
+            <p class="font-body text-h4">C.F. 91080740938</p>
+          </div>
+          <div class="flex flex-col items-center gap-2">
+            <Icon name="bank" class="size-24 shrink-0"/>
+            <p class="font-heading text-h3 self-center">Fai un‘ erogazione liberale</p>
+            <p class="font-body text-h4">IBAN IT07 I030 6909 6061 0000 0151 820</p>
+          </div>
+          <div class="flex flex-col items-center gap-2">
+            <Icon name="person" class="size-24 shrink-0"/>
+            <p class="font-heading text-h3 self-center">Diventa socio</p>
+            <p class="font-body text-h4">Con quota annuale</p>
+          </div>
         </div>
         <p class="font-body text-h4 reveal delay-700">
           Con un semplice gesto contribuirai a sostenere i nostri progetti educativi e sociali che da anni attiviamo nel nostro territorio. Grazie!
         </p>
       </div>
     </div>
-    <div class="flex lg:hidden flex-col items-center gap-6 py-10 text-center">
-      <h1 class="font-heading text-h1 reveal">Fai la differenza</h1>
-
-        <div class="flex flex-col justify-between gap-8 reveal delay-150 float">
-        <div class="flex flex-col items-center">
+    <div class="flex lg:hidden flex-col gap-6">
+      <h1 class="font-heading text-h1 reveal text-left mx-6">Fai la differenza</h1>
+      <div class="flex flex-col justify-between gap-8 reveal delay-150 float mx-6">
+        <div class="flex items-center gap-6">
           <Icon name="hand" class="size-12 shrink-0 gap-1"/>
-          <p class="font-heading text-h2 self-center">Dona il 5x1000</p>
-          <p class="font-body text-h4">C.F. 91080740938</p>
+          <div class="flex flex-col">
+            <p class="font-heading text-h2 self-center">Dona il 5x1000</p>
+            <p class="font-body text-h4">C.F. 91080740938</p>
+          </div>
         </div>
-        <div class="flex flex-col items-center gap-1">
-          <Icon name="bank" class="size-12 shrink-0"/>
-          <p class="font-heading text-h2 self-center">Fai un‘ erogazione liberale</p>
-          <p class="font-body text-h4">IBAN IT07 I030 6909 6061 0000 0151 820</p>
+        <div class="flex items-center gap-6">
+          <Icon name="bank" class="size-12 shrink-0 gap-1"/>
+          <div class="flex flex-col">
+            <p class="font-heading text-h2/tight self-center">Fai un‘ erogazione liberale</p>
+            <p class="font-body text-h4">IBAN IT07 I030 6909 6061 0000 0151 820</p>
+          </div>
         </div>
-        <div class="flex flex-col items-center gap-1">
-          <Icon name="person" class="size-12 shrink-0"/>
-          <p class="font-heading text-h2 self-center">Diventa socio</p>
-          <p class="font-body text-h4">Con quota annuale</p>
+        <div class="flex items-center gap-6">
+          <Icon name="person" class="size-12 shrink-0 gap-1"/>
+          <div class="flex flex-col">
+            <p class="font-heading text-h2/tight self-center">Diventa socio</p>
+            <p class="font-body text-h4">Con quota annuale</p>
+          </div>
         </div>
-        </div>
-      <p class="font-body text-h4 reveal delay-700">
+      </div>
+      <p class="font-body text-h4 reveal delay-700 mx-6">
         Con un semplice gesto contribuirai a sostenere i nostri progetti educativi e sociali che da anni attiviamo nel nostro territorio. Grazie!
       </p>
       <div class="image-wrap reveal delay-150 w-full" style="--wipe-color: #F5F9FA">
