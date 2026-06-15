@@ -24,8 +24,8 @@ function copyPDFs() {
 }
 
 export default defineConfig({
-  // site: "https://gp2porcia.it",
-  site: "https://giovanni-paolo-ii.github.io",
+  site: "https://gp2porcia.it",
+//   site: "https://giovanni-paolo-ii.github.io",
   // base: '/gp2/',
   // trailingSlash: 'always',
   integrations: [
